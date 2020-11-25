@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>Math Typer</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header py-4 container-fluid text-center bg-primary">
+      <h1 class="display-3 text-white">Math Typer</h1>
+      <h3 class="display-5 my-3 text-white font-weight-normal">Format normal text into math symbols in real time!</h3>
+    </div>
+    <!-- Main Container -->
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-lg-6 px-4 py-4">
+                <form class="input">
+                    <textarea class="form-control" id="rawtext" name="rawtext" cols="30" rows="10" placeholder="Type normal text here..."></textarea>
+                </form>
+            </div>
+            <div class="col-lg-6 px-4 py-4">
+                <form class="formatted">
+                    <textarea class="form-control" name="edited" cols="30" rows="10" placeholder="Get formatted text here..." readonly></textarea>
+                    <button type="button" class="copybtn btn btn-primary float-right mt-2">copy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Documentation -->
+    <div class="container-fluid bg-primary py-4 px-5">
+        <h3 class="display-5 my-3 text-white font-weight-normal">Write whatever you want in the left panel (top panel if you're on mobile). The program recognizes some set commands and converts them into mathematical symbols.</h3>
+        <h2 class="display-5 my-5 text-white font-weight-normal">Recognized commands as of now:</h2>
+        <div class="commands">
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">./</span>  returns a division symbol (÷)</h3>
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">.r</span>  returns a root symbol (√)</h3>
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">.3r</span>  returns a cube root symbol (∛)</h3>
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">.4r</span>  returns a fourth root symbol (∜)</h3>
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">..c..</span>  returns a congruency symbol (≅)</h3>
+            <h3 class="display-5 my-3 text-light font-weight-normal"><span class="font-weight-bolder">tri </span>  returns a triangle symbol (∆). Note that there should be a space after 'tri'</h3>
+        </div>
+        <h2 class="display-5 my-5 text-white font-weight-normal">This is a work-in-progress. More commands will be added in the future.</h2>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
